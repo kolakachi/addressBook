@@ -1,0 +1,49 @@
+body{
+	background-color: #F7F7F9 !important;
+}
+
+.list-body, .add-body{
+	margin-top: 100px;
+}
+
+.add-body form{
+	background-color: #FFF;
+	border-radius: 3px;
+}
+
+.form-body{
+	padding: 10px;
+}
+
+#id_yourEmail,#id_yourName{
+	height: 25px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+}
+
+.errorlist{
+	list-style: none;
+	color: red;
+	text-align: center;
+}
+
+.welcome-body{
+	text-align: center;
+}
+
+.map{
+	padding-top: 15px;
+}
+
+.info{
+	color: #000;
+	text-align: center;
+}
+
+.list-body table{
+	background-color: #FFF;
+	text-align: center;
+}

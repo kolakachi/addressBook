@@ -1,0 +1,45 @@
+{% extends "contacts/base.html" %}
+{% block title %}List{% endblock %}
+{% block content %}
+    <div class="list-body">
+      
+        <table class="table-bordered col-md-6 col-md-push-3">
+            <thead>
+                <tr>
+                  <td>Id</td>
+                  <td>Name</td>
+                  <td>Email Address</td>
+                  <td>Date Added</td>
+                </tr>
+            </thead>
+            <tbody>
+               {% for contact in allContacts %}
+                  <tr>
+                      <td>{{ contact.id }}</td>
+                      <td>{{ contact.name }}</td>
+                      <td>{{ contact.emailAddress }}</td>
+                      <td>{{ contact.date_logged }}</td>
+                  </tr>
+               {% endfor %}
+            </tbody>
+
+        </table>
+        
+        <div class="clearfix"></div>
+        
+        <div class="col-md-4 col-md-push-4 map">
+            <div class="col-md-6">
+                <a class="btn btn-default" href="/">Home</a> 
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-default" href="/add">New Entry</a> 
+            </div>
+            
+            <div class="clearfix"></div>
+            
+        </div>
+       
+        <div class="clearfix"></div>
+
+    </div>
+{% endblock %}

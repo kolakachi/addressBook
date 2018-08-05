@@ -1,0 +1,22 @@
+{% extends "contacts/base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+        
+    <div class="jumbotron">
+        <div class="welcome-body">
+            <h1>Welcome</h1>
+            <p>Address Book is a simple web app designed with Django for logging and viewing Names and Email Addresses.</p>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <a class="btn btn-default" href="/list">View Addresses &raquo;</a> 
+                </div>
+                <div class="col-md-6">
+                   <a class="btn btn-default" href="/add">New Entry &raquo;</a> 
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            </div>
+        </div>
+
+
+{% endblock %}

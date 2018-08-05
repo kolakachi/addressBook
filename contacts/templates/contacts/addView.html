@@ -1,0 +1,52 @@
+{% extends "contacts/base.html" %}
+{% block title %}Add{% endblock %}
+{% block content %}
+
+    <div class="add-body">
+        {% if message != '' %}
+        <p class="info"> {{message}}<p>
+        {% endif%}
+        <form action="/addanewcontact" method="post" role="form" class="col-md-4 col-md-push-4">
+            <div class="form-horizontal form-body">
+                  {% csrf_token %}
+                <div class="form-group col-md-10 col-md-push-1">    
+                  {{ form.Name.label_tag }}
+                  {{ form.Name}}
+                  {{ form.Name.errors }}
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                <div class="form-group col-md-10 col-md-push-1">    
+                  {{ form.Email.label_tag }}
+                  {{ form.Email}}
+                  {{ form.Email.errors }}
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="form-group">
+                  <div class="col-md-4 col-md-push-4">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                  </div>
+                  
+                  <div class="clearfix"></div>
+                
+                </div>
+            </div>
+        </form>
+        
+        <div class="clearfix"></div>
+        
+        <div class="col-md-4 col-md-push-4 map">
+            <div class="col-md-6">
+                <a class="btn btn-default" href="/">Home</a> 
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-default" href="/list">View Entries</a> 
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+{% endblock %}
